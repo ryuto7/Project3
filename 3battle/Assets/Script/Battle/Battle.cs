@@ -58,8 +58,10 @@ public class Battle : MonoBehaviour
                 BattleResult(EnemyNo);
             }
             else
-            {
+            {       //リロール
+                GameManager.instance.gameMode = 0;
                 StartCoroutine(BattleMatching(difficulty));
+                Debug.Log("リロールしました");
             }
             yield return new WaitForSeconds(delay);
             BattleReset(EnemyNo);

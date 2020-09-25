@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D2E26667-EB7F-8872-EB82-3E05F77F3DDC}</ProjectGuid>
+    <ProjectGuid>{3BC4B3F6-24FC-61BA-490E-0C2A1FCA6CF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -90,92 +90,91 @@
     <Compile Include="Assets\Script\Services\GoogleAds.cs" />
     <Compile Include="Assets\Script\UnUsed\EventPick.cs" />
     <Compile Include="Assets\Sound\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\debug.cs" />
     <None Include="Assets\AssetStore\Free Pixel Art Forest\Contact.txt" />
     <None Include="Assets\Sound\Dark Future\ReadMe.txt" />
     <None Include="Assets\AssetStore\Free Pixel Art Forest\Lisense.txt" />
     <None Include="Assets\AssetStore\Plugins\Demigiant\DOTween\readme.txt" />
     <None Include="Assets\AssetStore\Free Pixel Art Forest\readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>R:/Application/Unity/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -349,7 +348,7 @@
       <HintPath>R:/Application/Unity/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>R:/Unity/test2/Assets/AssetStore/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/AssetStore/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>R:/Application/Unity/2019.3.7f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -705,23 +704,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
-      <Project>{13EE383F-B033-F8C8-0AC4-7F1B7183FB81}</Project>
+      <Project>{3F62980F-C359-6F9B-ACFC-DF9261916859}</Project>
       <Name>NaughtyAttributes.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{FC158583-C69D-73F2-D36C-AFBF417502C3}</Project>
+      <Project>{C388C912-AFAC-0A07-B7EA-85E08205E7D8}</Project>
       <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{26273F7A-908A-E6BE-E9FD-8555FF75643D}</Project>
+      <Project>{D02F54DF-693D-E673-8107-20CD72F0100F}</Project>
       <Name>NaughtyAttributes.Test</Name>
     </ProjectReference>
     <ProjectReference Include="GoogleMobileAds.csproj">
-      <Project>{C9A20335-B652-EBC8-6DB0-0F6F7C558F64}</Project>
+      <Project>{8A4FF119-E2DE-F617-C19A-FE9DBBCBF024}</Project>
       <Name>GoogleMobileAds</Name>
     </ProjectReference>
     <ProjectReference Include="GoogleMobileAds.Editor.csproj">
-      <Project>{CE90921C-F20A-C2DD-046E-A71C6663C833}</Project>
+      <Project>{8D055C13-D489-B560-D381-67256AEE6601}</Project>
       <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
   </ItemGroup>

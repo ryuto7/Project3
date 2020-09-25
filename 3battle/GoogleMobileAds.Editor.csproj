@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CE90921C-F20A-C2DD-046E-A71C6663C833}</ProjectGuid>
+    <ProjectGuid>{8D055C13-D489-B560-D381-67256AEE6601}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>GoogleMobileAds.Editor</AssemblyName>
@@ -71,16 +71,16 @@
     <None Include="Assets\GoogleMobileAds\Editor\GoogleMobileAds.Editor.asmdef" />
     <None Include="Assets\GoogleMobileAds\Editor\GoogleMobileAdsDependencies.xml" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>R:/Unity/test2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>R:/Application/Unity/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -281,31 +281,31 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>R:/Unity/test2/Assets/AssetStore/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/AssetStore/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
-      <HintPath>R:/Unity/test2/Assets/AssetStore/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/AssetStore/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver_v1.2.156">
-      <HintPath>R:/Unity/test2/Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.156.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.156.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver_v1.2.156">
-      <HintPath>R:/Unity/test2/Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.156.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.156.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver_v1.2.156">
-      <HintPath>R:/Unity/test2/Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.156.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.156.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-      <HintPath>R:/Unity/test2/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl_v1.2.156">
-      <HintPath>R:/Unity/test2/Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.156.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.156.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>R:/Unity/test2/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>R:/Unity/test2/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>R:/GitHub_Repository/Project3/3battle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>R:/Application/Unity/2019.3.7f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -670,7 +670,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="GoogleMobileAds.csproj">
-      <Project>{C9A20335-B652-EBC8-6DB0-0F6F7C558F64}</Project>
+      <Project>{8A4FF119-E2DE-F617-C19A-FE9DBBCBF024}</Project>
       <Name>GoogleMobileAds</Name>
     </ProjectReference>
   </ItemGroup>
