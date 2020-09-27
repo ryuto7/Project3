@@ -16,6 +16,11 @@ public class OptionWindow : MonoBehaviour
     [Header("メニュー")]
     [SerializeField] GameObject menu;
 
+
+
+
+
+
     [Button("OptionIn")]
     public void OptionIn()
     {
@@ -25,6 +30,7 @@ public class OptionWindow : MonoBehaviour
             seq.SetEase(Ease.OutBounce);
             seq.Append(rectTran.DOLocalJump(new Vector3(0f, 0f, 0f), jumpPower, numJumps, durationIn));
             GameManager.instance.gameMode = 1; //ゲームモード変更
+            SoundDateBase.instance.SE_Option();
             Debug.Log("オプションIn");
         }
     }
@@ -36,6 +42,7 @@ public class OptionWindow : MonoBehaviour
         seq.SetEase(Ease.OutBounce);
         seq.Append(rectTran.DOLocalJump(new Vector3(0f, 2000f, 0f), jumpPower, numJumps, durationOut));
         GameManager.instance.gameMode = 0;
+        SoundDateBase.instance.SE_Option();
         Debug.Log("オプションOut");
     }
 

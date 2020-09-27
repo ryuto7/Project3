@@ -29,17 +29,6 @@ public class ItemPrefab : MonoBehaviour
         
     }
 
-    void Type2()
-    {
-        var item = ItemDateBase.instance.date[ItemNo];
-        if (item.type == 2)
-        {
-            item.number++;
-        }
-
-        CreatButton();
-    }
-
     public void CreatButton()
     {
         //ボタンセット
@@ -66,6 +55,7 @@ public class ItemPrefab : MonoBehaviour
         my.lck += lck;
         my.spd += spd;
 
+        SoundDateBase.instance.SE_Used();
         status.GetComponent<StatusDisplay>().SetStatus();
         Destroy(this.gameObject);
     }

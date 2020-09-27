@@ -1,10 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
-using NaughtyAttributes;
-using UnityEngine.PlayerLoop;
-
+using DG.Tweening;
 public class Battle : MonoBehaviour
 {
     [Header("参照")]
@@ -13,12 +11,14 @@ public class Battle : MonoBehaviour
     [SerializeField] Image image; //敵のイメージを挿入
     [SerializeField] Text text; //ログtext
     [SerializeField] GameOverWindow csGameOverWindow;
+    [SerializeField] Text floorText;
 
     bool isBattle; //戦闘中
     bool isLog;//ボタン制御
     int turnNumber; //turn数
     bool isAuto; //使う予定
-    
+    int floorNumber; //階層
+
     [Header("戦闘ログ速度ディレイ")]
     public float delay; //ログディレイ
     int enemyHP;//hp保存 リセット用
@@ -38,40 +38,41 @@ public class Battle : MonoBehaviour
 
 
     #region 戦闘関連
-    public IEnumerator BattleMatching(int difficulty) //敵選択 最期に初期化メソッド  
+    public IEnumerator BattleMatching() //敵選択 最期に初期化メソッド  
     {
         if (GameManager.instance.gameMode == 0)//通常時のみ動作
         {
             GameManager.instance.gameMode = 1; //モード移行 最期に戻す
             int EnemyNo = Random.Range(0, EnemyDate.instance.date.Length);
             var enemy = EnemyDate.instance.date[EnemyNo];
-            Debug.Log("No" + EnemyNo + " " + enemy.name + " 敵のデータ数" + EnemyDate.instance.date.Length);
+            //Debug.Log("No" + EnemyNo + " " + enemy.name + " 敵のデータ数" + EnemyDate.instance.date.Length);
             text.text = "";//テキスト初期化
-            if (difficulty >= enemy.difficulty)//難易度判定
+            if (floorNumber >= enemy.difficulty)//難易度判定
+
             {
                 image.sprite = enemy.sprite;
                 text.text += "\n\n" + enemy.name + "があらわれた";
                 UnderPositionText(1);
-                SaveEnemyDate(EnemyNo, true); //保存
-
+                SaveEnemyDate(EnemyNo, true); //敵保存
+                //バトルの後 結果に移行
                 yield return StartCoroutine(MainBattle(EnemyNo));
                 BattleResult(EnemyNo);
+                //リセットに移行 
+                yield return new WaitForSeconds(delay);
+                BattleReset(EnemyNo);//終了処理
             }
             else
-            {       //リロール
+            {   //リロール
                 GameManager.instance.gameMode = 0;
-                StartCoroutine(BattleMatching(difficulty));
+                StartCoroutine(BattleMatching());
                 Debug.Log("リロールしました");
             }
-            yield return new WaitForSeconds(delay);
-            BattleReset(EnemyNo);
         }
     }
 
 
     private IEnumerator MainBattle(int EnemyNo) //戦闘処理 Loop //自分と相手の行動
     {
-        //ｼｮｰﾄｶｯﾄ
         var enemy = EnemyDate.instance.date[EnemyNo];
         var my = Status.instance;
 
@@ -131,17 +132,18 @@ public class Battle : MonoBehaviour
         var my = Status.instance;
 
         //初期化処理
-        Debug.Log("終了  自分のhp" + my.hp + "敵のhp" + enemy.hp);
+        //Debug.Log("終了  自分のhpが" + my.hp + "敵のhpが" + enemy.hp);
         isBattle = false;
         turnNumber = 0;
         SaveEnemyDate(EnemyNo, false);//HP初期化
+
         isLog = false;//ボタン押せる
 
-        /*if (isAuto)
-        {
-            StartCoroutine(BattleMatching(0));
-        }  */
 
+        if (isAuto)//オート実装
+        {
+            StartCoroutine(BattleMatching());
+        }
     }
 
     void BattleResult(int EnemyNo) //戦闘結果処理
@@ -158,6 +160,7 @@ public class Battle : MonoBehaviour
             UnderPositionText(0);
             GameManager.instance.gameMode = 0; //モードリセット
             csGameOverWindow.GameOverIn();
+            NextFloor(false);
         }
 
         if (enemy.hp <= 0)
@@ -168,6 +171,7 @@ public class Battle : MonoBehaviour
             my.gold += enemy.gold;
             UnderPositionText(0);
             GameManager.instance.gameMode = 0; //モードリセット
+            NextFloor(true);
         }
     }
 
@@ -192,13 +196,13 @@ public class Battle : MonoBehaviour
                 dmg = 0;
             enemy.hp -= dmg;
             //ログに出る
-            text.text += "\n" + enemy.name + "に" + (my.atk - enemy.def) + "のダメージ";
+            text.text += "\n" + enemy.name + "に" + dmg + "のダメージ";
             SoundDateBase.instance.SE_Attack_Normal();
         }
-        Debug.Log("自分の攻撃 相手のHP" + enemy.hp);
+        //Debug.Log("自分の攻撃 相手のHP" + enemy.hp);
     }
 
-    void Attack_Enemy(int EnemyNo)
+    void Attack_Enemy(int EnemyNo) //敵の攻撃
     {//ｼｮｰﾄｶｯﾄ
         var enemy = EnemyDate.instance.date[EnemyNo];
         var my = Status.instance;
@@ -210,7 +214,7 @@ public class Battle : MonoBehaviour
             my.hp -= (enemy.atk * 3);
             text.text += "\nクリティカル!!!" + "\n自分に" + (enemy.atk * 3) + "のダメージ";
             SoundDateBase.instance.SE_Attack_Crit();
-            Debug.Log("クリティカル出てる"); Debug.Log("クリティカル出てる"); Debug.Log("クリティカル出てる"); Debug.Log("クリティカル出てる");
+            Debug.Log("クリティカル判定");
         }
         else//通常攻撃
         {
@@ -219,14 +223,12 @@ public class Battle : MonoBehaviour
                 dmg = 0;
             my.hp -= dmg;
             //↓ログ
-            text.text += "\n" + "自分に" + (enemy.atk - my.def) + "のダメージ";
+            text.text += "\n" + "自分に" +dmg+ "のダメージ";
             SoundDateBase.instance.SE_Attack_Normal();
         }
-        Debug.Log(enemy.name + "の攻撃 自分のHP" + my.hp);
+        //Debug.Log(enemy.name + "の攻撃 自分のHP" + my.hp);
     }
     #endregion
-
-
 
     #region 管理メソッド
     void UnderPositionText(int sound) //text.textの行の次に必須
@@ -252,21 +254,30 @@ public class Battle : MonoBehaviour
         if (save)
         {
             enemyHP = EnemyDate.instance.date[number].hp; //hp保存
+            Debug.Log(EnemyDate.instance.date[number].name+ "のHP"+ enemyHP + "をenemyHPに保存");
         }
         if (!save)
         {
             EnemyDate.instance.date[number].hp = enemyHP; //hp初期化
-            Debug.Log("敵のHPを"+enemyHP+"にリセット");
+            Debug.Log(EnemyDate.instance.date[number].name + "のHPを"+enemyHP+"にリセット");
         }
     }
-    #endregion
 
-
-    void GameOverMenu()
+    void NextFloor(bool win)
     {
-
+        if (win)
+        {
+            floorNumber++;
+            floorText.text = floorNumber + "F ";
+        }
+        if (!win)
+        {
+            floorNumber=0;
+            floorText.text = floorNumber + "F ";
+        }
     }
 
+    #endregion
 
     #region ボタン
     [Button("ランダム戦闘ボタン")]
@@ -275,7 +286,7 @@ public class Battle : MonoBehaviour
         if (!isLog && Status.instance.hp > 0)
         {
             isLog = true;
-            StartCoroutine(BattleMatching(10));
+            StartCoroutine(BattleMatching());
         }
     }
     [Button("HP回復")]

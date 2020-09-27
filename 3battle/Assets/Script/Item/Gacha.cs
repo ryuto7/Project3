@@ -13,13 +13,15 @@ public class Gacha : MonoBehaviour
     {
         if (Status.instance.gold > 0) //goldとgamemode
         {
+            SoundDateBase.instance.SE_Gacha();
             Status.instance.gold -= 1;
             int itemNo = Random.Range(0, ItemDateBase.instance.date.Length);
             var item = ItemDateBase.instance.date[itemNo];
             csItemGet.ButtonCreat(itemNo);
             csStatusDisplay.SetStatus();
         }
-
+        else
+            SoundDateBase.instance.SE_GachaFalse();
     }
 
 

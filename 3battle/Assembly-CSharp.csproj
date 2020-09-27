@@ -71,9 +71,11 @@
     <Compile Include="Assets\AssetStore\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\AssetStore\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\AssetStore\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\BackgroundDate.cs" />
     <Compile Include="Assets\Scenes\nextScene.cs" />
     <Compile Include="Assets\Script\Battle\Battle.cs" />
     <Compile Include="Assets\Script\Battle\StatusDisplay.cs" />
+    <Compile Include="Assets\Script\ClickParticle.cs" />
     <Compile Include="Assets\Script\DateBase.Manager\EnemyDate.cs" />
     <Compile Include="Assets\Script\DateBase.Manager\EventDateBase.cs" />
     <Compile Include="Assets\Script\DateBase.Manager\GameManager.cs" />

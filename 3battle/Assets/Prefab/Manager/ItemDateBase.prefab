@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9034420748802837677
+--- !u!1 &6002405749456707908
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9034420748802837664}
-  - component: {fileID: 9034420748802837679}
+  - component: {fileID: 6002405749456707910}
+  - component: {fileID: 6002405749456707911}
   m_Layer: 0
   m_Name: ItemDateBase
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9034420748802837664
+--- !u!4 &6002405749456707910
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034420748802837677}
+  m_GameObject: {fileID: 6002405749456707908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,136 +31,819 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9034420748802837679
+--- !u!114 &6002405749456707911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034420748802837677}
+  m_GameObject: {fileID: 6002405749456707908}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dbd7bfcd3b36494e86fbdb01ff8d57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   date:
-  - name: 
-    rare: 0
-    sprite: {fileID: 0}
+  - name: "\u5263"
+    rare: 1
+    sprite: {fileID: 21300000, guid: fa6f823649b645d4bac591622c8788a8, type: 3}
     describe: 
-    power: 0
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 0
+    lck: 0
+    spd: 1
+    number: 0
+    type: 0
+  - name: "\u5263+"
+    rare: 1
+    sprite: {fileID: 21300000, guid: c66ed0e44ba38514988a245ca29f0808, type: 3}
+    describe: 
+    HpHeal: 0
+    atk: 2
+    def: 0
+    lck: 0
+    spd: 1
+    number: 0
+    type: 0
+  - name: "\u9244\u306E\u5263"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 69cd25d81ef7f5e4e9e132cc89455cba, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30EC\u30A4\u30D4\u30A2"
+    rare: 2
+    sprite: {fileID: 21300000, guid: a21bda78f264baf42b6c73c487159d15, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 4
+    def: 0
+    lck: 0
+    spd: 2
+    number: 0
+    type: 0
+  - name: "\u9244\u306E\u5263+"
+    rare: 2
+    sprite: {fileID: 21300000, guid: a7045fe79b035c844984e312bcc685f7, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u77F3\u306E\u5263"
+    rare: 3
+    sprite: {fileID: 21300000, guid: a6b8671b175662145bbdda141a6624a6, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 1
+    def: 0
+    lck: 0
+    spd: -1
+    number: 0
+    type: 0
+  - name: "\u77F3\u306E\u5263+"
+    rare: 3
+    sprite: {fileID: 21300000, guid: a6b8671b175662145bbdda141a6624a6, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 1
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u5263?"
+    rare: 3
+    sprite: {fileID: 21300000, guid: 13feb768e95c99c4fbfd6e42b2ec62bf, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 2
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30E9\u30F3\u30B9"
+    rare: 3
+    sprite: {fileID: 21300000, guid: 7e0da7824dd94a645bfb723fce5f3d45, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 1
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30B0\u30E9\u30C7\u30A3\u30A6\u30B9"
+    rare: 3
+    sprite: {fileID: 21300000, guid: 16d2b2db81586aa49a4bac3677c666c4, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 5
+    def: 0
+    lck: 0
+    spd: 1
+    number: 0
+    type: 0
+  - name: "\u6D77\u8CCA\u306E\u5263"
+    rare: 3
+    sprite: {fileID: 21300000, guid: 81e6df8997f4cc2498e40e43800073cc, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30B5\u30FC\u30D9\u30EB"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 3f321136484f6614c8625260bb4a96e3, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 4
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30B7\u30E7\u30FC\u30C6\u30EB"
+    rare: 2
+    sprite: {fileID: 21300000, guid: f214069b55846b944a67de420de5f2f5, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 0
+    lck: 0
+    spd: 2
+    number: 0
+    type: 0
+  - name: "\u30D5\u30E9\u30F3\u30D9\u30EB\u30B8\u30A7"
+    rare: 4
+    sprite: {fileID: 21300000, guid: 5365c0629a4650a429e47a3de90d9926, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 30
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u77ED\u5200"
+    rare: 3
+    sprite: {fileID: 21300000, guid: f5f835527eebb1e4c8210c05782bd8ad, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 1
+    def: 0
+    lck: 0
+    spd: 5
+    number: 0
+    type: 0
+  - name: "\u3053\u3093\u68D2"
+    rare: 3
+    sprite: {fileID: 21300000, guid: a3318204ef3833347b29e658d087c04e, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 10
+    def: 0
+    lck: 0
+    spd: 5
+    number: 0
+    type: 0
+  - name: "\u77ED\u5263"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 09fca3ed96fc8144fac12293b82d9a6f, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 5
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u68D8"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 24930a9c8c0d8f045b213e717c603440, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30D0\u30C8\u30EB\u30D5\u30C3\u30AF"
+    rare: 3
+    sprite: {fileID: 21300000, guid: 252c31a818a8bad4aaf9c39ad8048a25, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 10
+    def: 0
+    lck: 5
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30AA\u30FC\u30EB"
+    rare: 1
+    sprite: {fileID: 21300000, guid: 8aa0ad9ffee1a6945943978d5530d6e8, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u6728\u5200"
+    rare: 1
+    sprite: {fileID: 21300000, guid: 63b48e55430bcea47be2faded1120883, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u6728\u306E\u5263"
+    rare: 1
+    sprite: {fileID: 21300000, guid: 469d6192a7c25ca4985fccf8a66e389d, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 1
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u6728\u306E\u7D30\u5263"
+    rare: 1
+    sprite: {fileID: 21300000, guid: beb90eb28d6c80d498c8947778610888, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 1
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u9244\u306E\u77ED\u5263"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 3e6c82a266a21494f92111a6c26ad90d, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u6295\u3052\u30CA\u30A4\u30D5"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 848849938eec9a74d90a31f714884d58, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 0
+    def: 0
+    lck: 0
+    spd: 5
+    number: 0
+    type: 0
+  - name: "\u77ED\u5263+"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 29f4f4c367f191247b3fbcef1589f93e, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 0
+    def: 0
+    lck: 0
+    spd: 5
+    number: 0
+    type: 0
+  - name: "\u77ED\u5263++"
+    rare: 4
+    sprite: {fileID: 21300000, guid: 4139fc93c1be30e42844c88b7099c938, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 0
+    def: 0
+    lck: 10
+    spd: 15
+    number: 0
+    type: 0
+  - name: "\u5305\u4E01"
+    rare: 1
+    sprite: {fileID: 21300000, guid: ed7c90e52d4163843a8b76895787f557, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 2
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u51FA\u5203\u5305\u4E01"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 50a9e854f20c4784782236a3dd34c130, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 5
+    def: 0
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u6B20\u3051\u305F\u30CA\u30A4\u30D5"
+    rare: 3
+    sprite: {fileID: 21300000, guid: f95ecfa50be3cac4fa57f3190d943d98, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 3
+    def: 0
+    lck: 3
+    spd: 3
+    number: 0
+    type: 0
+  - name: "\u5207\u308A\u3084\u3059\u3044\u5263"
+    rare: 2
+    sprite: {fileID: 21300000, guid: c7b5db84cd27c8d44a7fde3689c2f274, type: 3}
+    describe: 2
+    HpHeal: 0
+    atk: 0
+    def: 0
+    lck: 5
+    spd: 3
+    number: 0
+    type: 0
+  - name: "\u3050\u306B\u3083\u5263"
+    rare: 3
+    sprite: {fileID: 21300000, guid: 498f97c0037b7284b85530e6ea629bb4, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 0
+    def: 0
+    lck: 6
+    spd: 7
+    number: 0
+    type: 0
+  - name: "\u9ED2\u3044\u6D77\u8CCA\u306E\u5263"
+    rare: 4
+    sprite: {fileID: 21300000, guid: 9c4eacf1c5b56674d8d82c456e4a23f5, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 0
+    def: 0
+    lck: 15
+    spd: 15
+    number: 0
+    type: 0
+  - name: "\u69CD"
+    rare: 1
+    sprite: {fileID: 21300000, guid: d422e9af95038174f8a32d582c34532a, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 2
+    def: 3
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u9244\u306E\u69CD"
+    rare: 1
+    sprite: {fileID: 21300000, guid: 8259acaa07b7f6b47a601e5ef8761902, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 2
+    def: 3
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u30B9\u30D4\u30A2"
+    rare: 2
+    sprite: {fileID: 21300000, guid: 794cf1b309bacf7499d7bd34289c478f, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 4
+    lck: 0
+    spd: 0
+    number: 0
+    type: 0
+  - name: "\u6295\u3052\u30CA\u30A4\u30D5+"
+    rare: 2
+    sprite: {fileID: 21300000, guid: f8ed298d3f49fab49a2d1cc47dfa4ea8, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 0
+    def: 4
+    lck: 0
+    spd: 3
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: d2379404ecd2165418666f0f86c8106d, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: d7a1b286ba4b5a142bc44b72a09ca0c2, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: fdb946d75d57ab3449bb27394ece32a1, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: abeb4c7454f077c4a83df5bb0fa2f301, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 9970b8fd779c7ff41a88673e13349232, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: ba9db1486f7733d4e9a2cbf6493bfa79, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 9d7af33462fac2d40a58ca366e92e453, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 503fcde4a3158ac4e80d0ca790d969d6, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 1ebeabfa8f9e8124bb9f7c5826c41c59, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 0bbf4002726c5a74b84d0dd75b66de10, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 65e87ca8bc47b7a4c98878db0bf3f1bc, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 207238a4d2b24dd41bd82305169359d3, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 691a6465587a5a0408c6445222ab9eeb, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
   - name: 
-    rare: 0
-    sprite: {fileID: 0}
-    describe: 
-    power: 0
+    rare: 2
+    sprite: {fileID: 21300000, guid: 754ba615704f69e4b906f3ef15d1c6a1, type: 3}
+    describe: 3
     HpHeal: 0
-    MpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 0d8b854e56638e543b923dffdbfb7672, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: a9e6186a67fb8e145b5fcb025461de44, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: dce74fcc72ac39649af475b1e088335f, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: fe37c4dadf84e1c498b171aa8053ec9e, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 8750f8b77af195f4691b7067592083c3, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 62e0fb1b1336d2e48aaa65f76985002a, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 5cf00665eebdc7b4ea5929f3b5953eab, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 5f1bf4925083b114984156ec925a23b6, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 4433a261540fd9d468ae322f6ebd235d, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 1be0fcbc3d2e1ac44971a3b877281599, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: d08b2cbb46815234493602d698221bc8, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 60b40749b9588ec40a17a6eefc803a95, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 2a9a0992256d3e74aab3df3389579992, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 1e5b9d106bf68da428a6961fa701ea85, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 7a5998ae9d28b5843bf82e8320132f13, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 46a0a2e63e2755d46b319c2d76f6db36, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: d093e00bd6a4c3142bad11354d664865, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 0651e2d5afc091543a40698b1e9c51b3, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: f810df44207bfa644b5967a551bc8a20, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 46ccaf9c3b773dd4284487643a9e6116, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 89e5e7b48d6c67247a59a10082409ee8, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
+    type: 0
+  - name: 
+    rare: 2
+    sprite: {fileID: 21300000, guid: 38d6330cc700aa343a4e220f874f2487, type: 3}
+    describe: 3
+    HpHeal: 0
+    atk: 1
+    def: 1
+    lck: 1
+    spd: 1
+    number: 0
     type: 0
