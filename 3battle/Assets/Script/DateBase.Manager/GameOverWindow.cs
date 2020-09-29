@@ -2,12 +2,15 @@
 using UnityEngine;
 using DG.Tweening;
 using NaughtyAttributes;
+using UnityEngine.UI;
 
 public class GameOverWindow : MonoBehaviour
 {
     [Header("参照")]
     [SerializeField]
-    StatusDisplay csStatusDisplay;
+    StatusDisplay csStatusDisplay; //ステータスセット目的
+    [SerializeField] Image backgroundImg; //BGセット
+    [SerializeField] Image enemyImg;
 
     [Header("ゲームオーバー")]
     [SerializeField]
@@ -64,6 +67,10 @@ public class GameOverWindow : MonoBehaviour
             //ディレイの設定
             setButton = false;
             delayTime = 0f;
+
+            //Background enemy Reset
+            backgroundImg.sprite = BackgroundDate.instance.date[0].sprite;
+            enemyImg.sprite = EnemyDate.instance.date[0].sprite;
         }
     }
 

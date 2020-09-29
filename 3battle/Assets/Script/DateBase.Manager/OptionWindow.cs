@@ -5,6 +5,8 @@ using NaughtyAttributes;
 
 public class OptionWindow : MonoBehaviour
 {
+    [Header("参照")]
+
     [Header("オプション画面")]
     [SerializeField]
     RectTransform rectTran;
@@ -26,6 +28,7 @@ public class OptionWindow : MonoBehaviour
     {
         if (GameManager.instance.gameMode == 0)
         {
+
             Sequence seq = DOTween.Sequence();
             seq.SetEase(Ease.OutBounce);
             seq.Append(rectTran.DOLocalJump(new Vector3(0f, 0f, 0f), jumpPower, numJumps, durationIn));

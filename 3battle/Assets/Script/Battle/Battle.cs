@@ -3,6 +3,8 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEditorInternal;
+
 public class Battle : MonoBehaviour
 {
     [Header("参照")]
@@ -12,12 +14,15 @@ public class Battle : MonoBehaviour
     [SerializeField] Text text; //ログtext
     [SerializeField] GameOverWindow csGameOverWindow;
     [SerializeField] Text floorText;
+    [SerializeField] Image backgroundImg; // main bg
+    [SerializeField] IsAutoButton csIsAutoButton;
+    [SerializeField] OptionWindow csOptionWindow;
 
     bool isBattle; //戦闘中
-    bool isLog;//ボタン制御
+    public bool isLog;//ボタン制御
     int turnNumber; //turn数
-    bool isAuto; //使う予定
     int floorNumber; //階層
+    public bool test;//test
 
     [Header("戦闘ログ速度ディレイ")]
     public float delay; //ログディレイ
@@ -28,45 +33,44 @@ public class Battle : MonoBehaviour
     RectTransform enemyImage;
 
 
+
     private void Start()
     {
         text.text = "\n\n\n\n\n\n\n\n\n";//下に表示するための改行
         text.text = "おはろ～";
         UnderPositionText(0);
         image.sprite = EnemyDate.instance.date[0].sprite;
+        backgroundImg.sprite = BackgroundDate.instance.date[0].sprite; //開始時BGリセット
     }
 
 
     #region 戦闘関連
     public IEnumerator BattleMatching() //敵選択 最期に初期化メソッド  
     {
-        if (GameManager.instance.gameMode == 0)//通常時のみ動作
-        {
-            GameManager.instance.gameMode = 1; //モード移行 最期に戻す
-            int EnemyNo = Random.Range(0, EnemyDate.instance.date.Length);
-            var enemy = EnemyDate.instance.date[EnemyNo];
-            //Debug.Log("No" + EnemyNo + " " + enemy.name + " 敵のデータ数" + EnemyDate.instance.date.Length);
-            text.text = "";//テキスト初期化
-            if (floorNumber >= enemy.difficulty)//難易度判定
+        csOptionWindow.OptionOut(); //オプション開いてたら消す
+        GameManager.instance.gameMode = 1; //モード移行 最期に戻す
+        int EnemyNo = Random.Range(0, EnemyDate.instance.date.Length);
+        var enemy = EnemyDate.instance.date[EnemyNo];
+        text.text = "";//テキスト初期化
+        if (floorNumber >= enemy.difficulty)//難易度判定
 
-            {
-                image.sprite = enemy.sprite;
-                text.text += "\n\n" + enemy.name + "があらわれた";
-                UnderPositionText(1);
-                SaveEnemyDate(EnemyNo, true); //敵保存
-                //バトルの後 結果に移行
-                yield return StartCoroutine(MainBattle(EnemyNo));
-                BattleResult(EnemyNo);
-                //リセットに移行 
-                yield return new WaitForSeconds(delay);
-                BattleReset(EnemyNo);//終了処理
-            }
-            else
-            {   //リロール
-                GameManager.instance.gameMode = 0;
-                StartCoroutine(BattleMatching());
-                Debug.Log("リロールしました");
-            }
+        {
+            image.sprite = enemy.sprite;
+            text.text += "\n\n" + enemy.name + "があらわれた";
+            UnderPositionText(1);
+            SaveEnemyDate(EnemyNo, true); //敵保存
+                                          //バトルの後 結果に移行
+            yield return StartCoroutine(MainBattle(EnemyNo));
+            BattleResult(EnemyNo);
+            //リセットに移行 
+            yield return new WaitForSeconds(delay);
+            BattleReset(EnemyNo);//終了処理
+        }
+        else
+        {   //リロール
+            GameManager.instance.gameMode = 0;
+            StartCoroutine(BattleMatching());
+            Debug.Log("リロールしました");
         }
     }
 
@@ -138,9 +142,7 @@ public class Battle : MonoBehaviour
         SaveEnemyDate(EnemyNo, false);//HP初期化
 
         isLog = false;//ボタン押せる
-
-
-        if (isAuto)//オート実装
+        if (csIsAutoButton.isAuto && my.hp > 0)//オート実装
         {
             StartCoroutine(BattleMatching());
         }
@@ -269,6 +271,28 @@ public class Battle : MonoBehaviour
         {
             floorNumber++;
             floorText.text = floorNumber + "F ";
+
+            //Background
+            if (floorNumber == 1)
+            {
+               
+            }
+            switch (floorNumber)
+            {
+                case 1:
+                    backgroundImg.sprite = BackgroundDate.instance.date[1].sprite;
+                    Debug.Log("BG SET");
+                    break;
+                case 2:
+                    backgroundImg.sprite = BackgroundDate.instance.date[2].sprite;
+                    Debug.Log("BG SET");
+                    break;
+                case 3:
+                    backgroundImg.sprite = BackgroundDate.instance.date[3].sprite;
+                    Debug.Log("BG SET");
+                    break;
+
+            }
         }
         if (!win)
         {
@@ -277,13 +301,15 @@ public class Battle : MonoBehaviour
         }
     }
 
+
+
     #endregion
 
     #region ボタン
     [Button("ランダム戦闘ボタン")]
     public void BattleB()
     {
-        if (!isLog && Status.instance.hp > 0)
+        if (!isLog && Status.instance.hp > 0 && GameManager.instance.gameMode == 0)//通常時のみ動作)
         {
             isLog = true;
             StartCoroutine(BattleMatching());
