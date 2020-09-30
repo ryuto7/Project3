@@ -22,18 +22,19 @@ public class OptionWindow : MonoBehaviour
 
 
 
+
     [Button("OptionIn")]
     public void OptionIn()
     {
         if (GameManager.instance.gameMode == 0)
         {
+
             Sequence seq = DOTween.Sequence();
             seq.SetEase(Ease.OutBounce);
             seq.Append(rectTran.DOLocalJump(new Vector3(0f, 0f, 0f), jumpPower, numJumps, durationIn));
             GameManager.instance.gameMode = 1; //ゲームモード変更
             SoundDateBase.instance.SE_Option();
             Debug.Log("オプションIn");
-
         }
     }
 
@@ -47,5 +48,6 @@ public class OptionWindow : MonoBehaviour
         SoundDateBase.instance.SE_Option();
         Debug.Log("オプションOut");
     }
+
 
 }

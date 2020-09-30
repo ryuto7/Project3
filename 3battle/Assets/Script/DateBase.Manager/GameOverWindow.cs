@@ -11,7 +11,6 @@ public class GameOverWindow : MonoBehaviour
     StatusDisplay csStatusDisplay; //ステータスセット目的
     [SerializeField] Image backgroundImg; //BGセット
     [SerializeField] Image enemyImg;
-    [SerializeField] Battle csBattle; //メソッド使用
 
     [Header("ゲームオーバー")]
     [SerializeField]
@@ -72,9 +71,6 @@ public class GameOverWindow : MonoBehaviour
             //Background enemy Reset
             backgroundImg.sprite = BackgroundDate.instance.date[0].sprite;
             enemyImg.sprite = EnemyDate.instance.date[0].sprite;
-            
-            //階層リセット
-            csBattle.NextFloor(false);
         }
     }
 
