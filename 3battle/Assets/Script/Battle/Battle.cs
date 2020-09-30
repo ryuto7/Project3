@@ -3,7 +3,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using UnityEditorInternal;
+
 
 public class Battle : MonoBehaviour
 {
@@ -47,14 +47,13 @@ public class Battle : MonoBehaviour
     #region 戦闘関連
     public IEnumerator BattleMatching() //敵選択 最期に初期化メソッド  
     {
-        csOptionWindow.OptionOut(); //オプション開いてたら消す
         GameManager.instance.gameMode = 1; //モード移行 最期に戻す
         int EnemyNo = Random.Range(0, EnemyDate.instance.date.Length);
         var enemy = EnemyDate.instance.date[EnemyNo];
         text.text = "";//テキスト初期化
         if (floorNumber >= enemy.difficulty)//難易度判定
-
         {
+            AnimeEnemyMatch();
             image.sprite = enemy.sprite;
             text.text += "\n\n" + enemy.name + "があらわれた";
             UnderPositionText(1);
@@ -162,7 +161,8 @@ public class Battle : MonoBehaviour
             UnderPositionText(0);
             GameManager.instance.gameMode = 0; //モードリセット
             csGameOverWindow.GameOverIn();
-            NextFloor(false);
+            if (csIsAutoButton.isAuto) 
+                csIsAutoButton.ButtonIsAutoOFF();
         }
 
         if (enemy.hp <= 0)
@@ -174,6 +174,7 @@ public class Battle : MonoBehaviour
             UnderPositionText(0);
             GameManager.instance.gameMode = 0; //モードリセット
             NextFloor(true);
+            AnimeEnemyDefeat(); //anime
         }
     }
 
@@ -228,6 +229,7 @@ public class Battle : MonoBehaviour
             text.text += "\n" + "自分に" +dmg+ "のダメージ";
             SoundDateBase.instance.SE_Attack_Normal();
         }
+        AnimeEnemyAttack();
         //Debug.Log(enemy.name + "の攻撃 自分のHP" + my.hp);
     }
     #endregion
@@ -265,7 +267,7 @@ public class Battle : MonoBehaviour
         }
     }
 
-    void NextFloor(bool win)
+    public void NextFloor(bool win)
     {
         if (win)
         {
@@ -273,26 +275,25 @@ public class Battle : MonoBehaviour
             floorText.text = floorNumber + "F ";
 
             //Background
-            if (floorNumber == 1)
-            {
-               
-            }
+            backgroundImg.sprite = BackgroundDate.instance.date[floorNumber].sprite;
+
+            /*　
             switch (floorNumber)
             {
                 case 1:
                     backgroundImg.sprite = BackgroundDate.instance.date[1].sprite;
                     Debug.Log("BG SET");
                     break;
-                case 2:
+                case 10:
                     backgroundImg.sprite = BackgroundDate.instance.date[2].sprite;
                     Debug.Log("BG SET");
                     break;
-                case 3:
+                case 20:
                     backgroundImg.sprite = BackgroundDate.instance.date[3].sprite;
                     Debug.Log("BG SET");
                     break;
-
             }
+            */
         }
         if (!win)
         {
@@ -301,8 +302,23 @@ public class Battle : MonoBehaviour
         }
     }
 
-
-
+    void AnimeEnemyMatch()
+    {
+        //reset
+        enemyImage.transform.localPosition=new Vector3(0f, 0f, 0f);
+        enemyImage.DOScale(new Vector3(0f, 0f), 0f);
+        //set
+        enemyImage.DOScale(new Vector3(1f, 1f), 0.2f);
+    }
+    void AnimeEnemyAttack()
+    {
+        enemyImage.DOPunchScale(new Vector3(0.1f, 0.1f),0.2f);
+    }
+    void AnimeEnemyDefeat()
+    {
+        enemyImage.DOLocalRotate(new Vector3(0, 0, 360f), 0.2f, RotateMode.FastBeyond360);
+        enemyImage.DOLocalMove(new Vector3(100f,500f), 0.2f);
+    }
     #endregion
 
     #region ボタン

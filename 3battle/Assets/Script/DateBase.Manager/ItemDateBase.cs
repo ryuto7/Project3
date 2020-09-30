@@ -40,7 +40,7 @@ public class ItemDateBase : MonoBehaviour
         public int type;
 
     }
-    [ReorderableList]
+    //[ReorderableList]
     public Date[] date;
     #endregion
 
